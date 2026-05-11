@@ -1,0 +1,60 @@
+{
+  "tournaments": [
+    {
+      "tournament": "LQD FFAI Gateway 2026",
+      "logo": "https://liquipedia.net/freefire/images/thumb/a/a2/Free_Fire_Asia_Invitational_Gateway_lightmode.png/50px-Free_Fire_Asia_Invitational_Gateway_lightmode.png",
+      "date": "Apr 28 - May 13",
+      "link": "https://liquipedia.net/freefire/LQD_FFAI_Gateway_2026"
+    },
+    {
+      "tournament": "FFWS BD 2026 Spring",
+      "logo": "https://liquipedia.net/freefire/images/thumb/8/8e/Free_Fire_World_Series_Bangladesh_Spring_2026_lightmode.png/50px-Free_Fire_World_Series_Bangladesh_Spring_2026_lightmode.png",
+      "date": "Apr 30 - Jun 06",
+      "link": "https://liquipedia.net/freefire/Free_Fire_World_Series/2026/Bangladesh/Spring"
+    },
+    {
+      "tournament": "SHR IC: International",
+      "logo": "https://liquipedia.net/freefire/images/thumb/7/7a/SHR_International_Cup_lightmode.png/50px-SHR_International_Cup_lightmode.png",
+      "date": "May 06 - 16",
+      "link": "https://liquipedia.net/freefire/SHR_International_Cup"
+    },
+    {
+      "tournament": "Legacy Global Spring",
+      "logo": "https://liquipedia.net/freefire/images/thumb/1/1d/Legacy_Global_Spring_lightmode.png/50px-Legacy_Global_Spring_lightmode.png",
+      "date": "May 08 - 22",
+      "link": "https://liquipedia.net/freefire/Legacy_Global_Spring"
+    }
+  ],
+  "matches": [
+    {
+      "time": "May 11 - 19:10 BST",
+      "tournament": "LQD FFAI Gateway 2026",
+      "matchTitle": "Day 6: A vs C",
+      "map": "Game #1 on Bermuda"
+    },
+    {
+      "time": "May 11 - 19:30 BST",
+      "tournament": "LQD FFAI Gateway 2026",
+      "matchTitle": "Day 6: A vs C",
+      "map": "Game #2 on Purgatory"
+    },
+    {
+      "time": "May 11 - 20:00 BST",
+      "tournament": "LQD FFAI Gateway 2026",
+      "matchTitle": "Day 6: A vs C",
+      "map": "Game #3 on Kalahari"
+    },
+    {
+      "time": "May 11 - 20:20 BST",
+      "tournament": "LQD FFAI Gateway 2026",
+      "matchTitle": "Day 6: A vs C",
+      "map": "Game #4 on Nexterra"
+    },
+    {
+      "time": "May 11 - 20:50 BST",
+      "tournament": "LQD FFAI Gateway 2026",
+      "matchTitle": "Day 6: A vs C",
+      "map": "Game #5 on Solara"
+    }
+  ]
+}

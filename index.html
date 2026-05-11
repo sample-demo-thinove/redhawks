@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Red Hawks Esports | Version 2</title>
+    <!-- FontAwesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body class="overflow-x-hidden bg-black text-white">
+    <!-- Background YouTube Video -->
+    <div class="fixed inset-0 z-10 overflow-hidden pointer-events-none select-none">
+        <iframe allow="autoplay; encrypted-media" allowfullscreen
+            class="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 opacity-50 scale-[1.3] sm:scale-[1.1] pointer-events-none select-none"
+            frameborder="0"
+            src="https://www.youtube.com/embed/rbP-NLM4ec4?start=4&autoplay=1&mute=1&loop=1&playlist=rbP-NLM4ec4&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&iv_load_policy=3&fs=0"
+            tabindex="-1"></iframe>
+        <div class="absolute inset-0 hero-overlay pointer-events-none"></div>
+    </div>
+
+    <!-- Navigation (Version 2: Logo Only, No Text) -->
+    <nav class="fixed w-full z-50 bg-black/10 backdrop-blur-sm border-b border-white/5 transition-all duration-300 py-2"
+        id="heads">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <div class="flex items-center gap-10">
+                <a href="#home" class="group relative">
+                    <div
+                        class="absolute -inset-2 bg-red-600 rounded-full blur opacity-0 group-hover:opacity-20 transition duration-500">
+                    </div>
+                    <img alt="Red Hawks Logo" class="h-16 w-auto relative z-10"
+                        src="https://blogger.googleusercontent.com/img/a/AVvXsEguBtmKtePT3d23QKV0rJyTBdAF-SVgqh6hSuNJy0Tiz6UHiK6ai6Chw63cXHjdEMcu08lnNeRL8iTgJ2d6CcybgWmRQZ8boXU6W0D0rt_jc6GEks2zkPu-d6z7UbZPzYDxImQ2tVNxWkHh8P-tWbn_seXmdRmtE60eqgkTOJV7IM0Y7eiTp5lttx4tXMVE" />
+                </a>
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#home" class="nav-link-v2 text-white hover:text-red-500">Home</a>
+                    <a href="#upcoming" class="nav-link-v2 text-white hover:text-red-500">Upcoming Matches</a>
+                    <a href="#roster" class="nav-link-v2 text-white hover:text-red-500">Roster</a>
+                    <a href="#management" class="nav-link-v2 text-white hover:text-red-500">Leadership</a>
+                    <a href="#achievements" class="nav-link-v2 text-white hover:text-red-500">Achievements</a>
+                    <a href="#community" class="nav-link-v2 text-white hover:text-red-500">Community</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <div class="hidden sm:flex items-center gap-4 text-white/60" id="header-socials">
+                </div>
+                <button class="lg:hidden text-white text-2xl" id="mobile-menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="hidden lg:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-xl py-10 flex-col items-center space-y-6 border-b border-white/10"
+            id="mobile-menu">
+            <a href="#home" class="nav-link-v2">Home</a>
+            <a href="#upcoming" class="nav-link-v2">Upcoming Matches</a>
+            <a href="#roster" class="nav-link-v2">Roster</a>
+            <a href="#management" class="nav-link-v2">Leadership</a>
+            <a href="#achievements" class="nav-link-v2">Achievements</a>
+            <a href="#community" class="nav-link-v2">Community</a>
+        </div>
+    </nav>
+
+    <div class="relative z-20">
+        <!-- Hero Section (Version 2) -->
+        <section class="relative h-screen flex flex-col justify-end pb-0" id="home">
+            <div class="max-w-7xl mx-auto px-6 w-full pb-20">
+                <div class="max-w-2xl mb-12">
+                    <h2 class="text-red-600 font-black text-xl uppercase tracking-widest mb-4">Red Hawks South Asia</h2>
+                    <h1 class="text-6xl md:text-8xl font-black uppercase leading-none mb-6">Domination <br> Starts <span
+                            class="text-red-600">Here</span></h1>
+                    <p class="text-white/60 text-lg max-w-md">Join the elite force of South Asian esports. We don't just
+                        play; we conquer the field.</p>
+                </div>
+            </div>
+
+            <!-- Upcoming Events Ticker (KRÜ Style) -->
+            <div class="w-full ticker-box py-8 px-6 md:px-20 relative overflow-hidden h-32 flex items-center">
+                <div class="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center gap-10">
+                    <div class="shrink-0">
+                        <h3 class="font-black uppercase text-2xl tracking-tighter border-b-2 border-black/10 pb-1">
+                            Upcoming Events</h3>
+                    </div>
+                    <div id="ticker-content" class="flex-1 relative h-full flex items-center">
+                        <!-- Events will be injected here and loop -->
+                        <div class="animate-fade-in-out w-full flex items-center gap-6">
+                            <div class="w-12 h-12 bg-black/5 rounded-lg flex items-center justify-center">
+                                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEguBtmKtePT3d23QKV0rJyTBdAF-SVgqh6hSuNJy0Tiz6UHiK6ai6Chw63cXHjdEMcu08lnNeRL8iTgJ2d6CcybgWmRQZ8boXU6W0D0rt_jc6GEks2zkPu-d6z7UbZPzYDxImQ2tVNxWkHh8P-tWbn_seXmdRmtE60eqgkTOJV7IM0Y7eiTp5lttx4tXMVE"
+                                    class="w-8 h-8 object-contain" />
+                            </div>
+                            <span class="font-bold text-xl uppercase tracking-tighter">Loading Matches...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Matches Section (NEW Cards List) -->
+        <section class="py-20 bg-zinc-950/50 relative overflow-hidden" id="upcoming-matches">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex items-center gap-4 mb-10">
+                    <h2 class="text-3xl font-black uppercase tracking-tighter">Upcoming <span
+                            class="text-red-600">Matches</span></h2>
+                    <div class="h-px flex-1 bg-white/5"></div>
+                </div>
+                <div id="matches-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+                    <!-- Match cards will be injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Roster Section -->
+        <section class="py-32 bg-black relative" id="roster">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex items-center justify-between mb-20">
+                    <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter">Main <span
+                            class="text-red-600">Roster</span></h2>
+                    <div class="h-px flex-1 bg-white/10 mx-10 hidden md:block"></div>
+                    <p class="text-white/40 uppercase font-bold tracking-widest text-sm">Season 2026</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8" id="roster-container"></div>
+            </div>
+        </section>
+
+        <!-- Leadership Section -->
+        <section class="py-32 bg-zinc-900/50" id="management">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-20">
+                    <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4">Leadership</h2>
+                    <div class="w-20 h-2 bg-red-600 mx-auto"></div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-10 items-center justify-center" id="leadership-container">
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section class="py-32 bg-black overflow-hidden" id="achievements">
+            <div class="max-w-5xl mx-auto px-6">
+                <div class="text-center mb-20">
+                    <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter">Achievements</h2>
+                </div>
+                <div class="relative">
+                    <div class="absolute left-6 md:left-1/2 transform md:-translate-x-1/2 h-full w-px bg-white/10">
+                    </div>
+                    <div class="space-y-20" id="achievements-container"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Section -->
+        <section class="py-32 bg-black border-t border-white/5 overflow-hidden" id="community">
+            <div class="text-center mb-16 px-6">
+                <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4">Community</h2>
+                <p class="text-white/40 uppercase tracking-widest font-bold">The Family</p>
+            </div>
+            <div class="relative w-full overflow-hidden flex items-center group">
+                <div
+                    class="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-black via-black/40 to-transparent z-10 pointer-events-none">
+                </div>
+                <div
+                    class="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-black via-black/40 to-transparent z-10 pointer-events-none">
+                </div>
+                <div class="flex gap-10 animate-scroll px-10 py-10" id="community-container"></div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black py-20 border-t border-white/5 text-center">
+            <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-10">
+                <img alt="Logo" class="h-10 w-auto opacity-40"
+                    src="https://blogger.googleusercontent.com/img/a/AVvXsEguBtmKtePT3d23QKV0rJyTBdAF-SVgqh6hSuNJy0Tiz6UHiK6ai6Chw63cXHjdEMcu08lnNeRL8iTgJ2d6CcybgWmRQZ8boXU6W0D0rt_jc6GEks2zkPu-d6z7UbZPzYDxImQ2tVNxWkHh8P-tWbn_seXmdRmtE60eqgkTOJV7IM0Y7eiTp5lttx4tXMVE" />
+                <p class="text-white/40 text-sm">&copy; 2026 Red Hawks Esports. All rights reserved.</p>
+                <div class="flex items-center gap-6 text-white/40">
+                    <a href="#" class="hover:text-white transition-colors">Instagram</a>
+                    <a href="#" class="hover:text-white transition-colors">Facebook</a>
+                    <a href="#" class="hover:text-white transition-colors">X</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
