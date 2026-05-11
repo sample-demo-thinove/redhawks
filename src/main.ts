@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const heads = document.getElementById('heads');
     const icon = btn?.querySelector('i');
 
-    if (btn && menu && icon) {
+    if (btn && menu && icon && heads) {
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
             menu.classList.toggle('flex');
