@@ -10,7 +10,7 @@ async function scrapeLiquipedia() {
 
     try {
         await page.goto('https://liquipedia.net/freefire/Titan_Esports_Club', { waitUntil: 'domcontentloaded', timeout: 60000 });
-        
+
         console.log('Page loaded. Searching for data...');
 
         const data = await page.evaluate(() => {
@@ -62,10 +62,10 @@ async function scrapeLiquipedia() {
         });
 
         console.log(`Found ${data.tournaments.length} tournaments and ${data.matches.length} matches.`);
-        
+
         const publicDir = path.join(process.cwd(), 'public');
         if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir);
-        
+
         fs.writeFileSync(path.join(publicDir, 'data.json'), JSON.stringify(data, null, 2));
         console.log('Data saved to public/data.json');
 
